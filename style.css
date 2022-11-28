@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-    padding: 10px 10%;
+    padding: 10px 8%;
 }
 
 .icon {
@@ -128,9 +128,11 @@ li {
 
 /* body */
 .body-layout {
-    padding: 15px 10% 0;
+    padding: 15px 8% 0;
+    gap: 10px;
     display: grid;
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: calc((100% / 3) * 2) calc((100% / 3));
+    overflow-x: hidden;
 }
 
 /* main */
@@ -188,10 +190,77 @@ main {
     width: fit-content;
 }
 
-.pagination button:hover{
+.pagination button:hover {
     text-decoration: underline;
 }
 
-.pagination .next{
+.pagination .next {
     color: #8ab4f8;
+}
+
+/* aside */
+.card {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 7px;
+    border: 1px solid var(--border-color);
+}
+
+.card header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card header .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card header .images img:first-child {
+    grid-row: 1 / 3;
+}
+
+.card header .title,
+.card header .title-2 {
+    margin: 7px 10px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card header .title-2 {
+    font-size: 18px;
+}
+
+.card section {
+    padding: 15px;
+}
+
+/* footer */
+/* footer{
+    grid-column: 2 span;
+} */
+
+footer>div {
+    background-color: #171717;
+    padding: 20px 8%;
+    color: var(--border-color);
+    gap: 5px;
+}
+
+footer>div ul {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+}
+
+footer>div:first-child{
+    border-bottom: 1px solid var(--border-color);
 }
