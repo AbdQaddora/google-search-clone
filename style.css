@@ -156,14 +156,14 @@ main {
     font-size: 20px;
 }
 
-.related-searches >div {
+.related-searches>div {
     padding-top: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-.related-search{
+.related-search {
     background-color: #303134;
     padding: 15px;
     display: grid;
@@ -172,6 +172,26 @@ main {
     border-radius: 25px;
 }
 
-.related-search p a{
+.related-search p a {
     font-size: 18px !important;
+}
+
+/* pagination */
+.pagination {
+    display: grid;
+    width: fit-content;
+    margin: 25px auto;
+    grid-template-columns: repeat(11, 1fr);
+}
+
+.pagination button {
+    width: fit-content;
+}
+
+.pagination button:hover{
+    text-decoration: underline;
+}
+
+.pagination .next{
+    color: #8ab4f8;
 }
